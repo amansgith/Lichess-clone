@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { userProfile } from "../utils/lichess";
+import './profile.css';
 
 const Profile = () => {
     const [username, setusername] = useState('');
@@ -22,9 +23,9 @@ const Profile = () => {
             {profile && (
                 <div>
                     <p>{profile.username}</p>
-                    {/* <p>{profile.}</p> */}
+                    <p>{profile.profile.bio}</p>
                     <p>{profile.count.all}</p>
-                    {/* <p>{profile.profile.fiderating}</p> */}
+                    <p>{profile.prefs.blitz}</p>
                 </div>
             )}
         </div>

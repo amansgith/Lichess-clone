@@ -1,10 +1,10 @@
 import axios from "axios";
 
-const API_URL="https://lichess.org/api";
-const TOKEN='lip_7sZF8TV5VMuXITvg8rPz';
+const API_PUBLIC_URL='https://lichess.org/api';
+const TOKEN=process.env.ACCESS_TOKEN;
 
 export const userProfile= async(username)=>{
-    const response= await axios.get(`${API_URL}/account`,{
+    const response= await axios.get(`${API_PUBLIC_URL}/user/${username}`,{
         headers:{
             Authorization: `Bearer ${TOKEN}`
         }
