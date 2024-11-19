@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { userProfile } from "../utils/lichess";
-import './profile.css';
+// import 'profile.css';
 
 const Profile = () => {
     const [username, setusername] = useState('');
